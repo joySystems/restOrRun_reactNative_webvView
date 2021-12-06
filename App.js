@@ -1,13 +1,26 @@
 import { StatusBar } from 'expo-status-bar';
 import React from 'react';
-import { StyleSheet, Text, View } from 'react-native';
 
-export default function App() {
+import { Button, Platform, SafeAreaView, StyleSheet, Text, View, Pressable, useRef, useState} from 'react-native';
+import { WebView } from 'react-native-webview';
+import Icon from 'react-native-ico-material-design';
+
+const App = () => {
+  const webview = useRef();
+
+
   return (
-    <View style={styles.container}>
-      <Text>Open up App.js to start working on your app!</Text>
-      <StatusBar style="auto" />
-    </View>
+    
+    
+    
+    <WebView
+            ref={webview}
+            onNavigationStateChange={handleNavigationStateChanged}
+            source={{ uri: 'https://restrun.ru/' }}
+        />
+
+
+
   );
 }
 
@@ -19,3 +32,6 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
   },
 });
+
+
+export default App;
