@@ -3,12 +3,15 @@ node_modules/
 dist/
 npm-debug.*
 *.jks
+*.jks.old
 *.p8
+*.pem
 *.p12
 *.key
 *.mobileprovision
 *.orig.*
 web-build/
+credentials.json
 
 # macOS
 .DS_Store
